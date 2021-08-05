@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 2043395149}
   - component: {fileID: 2043395148}
   - component: {fileID: 2043395147}
+  - component: {fileID: 2043395151}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -327,16 +328,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b673edaa3b9aed449aa9e19a0835d00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoUpdate: 1
-  mapWidth: 100
+  terrainTypes:
+  - name: Water
+    height: 0.4
+    color: {r: 0.2232111, g: 0.45893404, b: 0.8301887, a: 0}
+  - name: Beach
+    height: 0.45
+    color: {r: 0.90655327, g: 0.9339623, b: 0.48900855, a: 0}
+  - name: Land
+    height: 0.75
+    color: {r: 0.23273467, g: 0.6320754, b: 0.19379672, a: 0}
+  - name: Mountain
+    height: 0.9
+    color: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 0}
+  - name: Mountain Peak
+    height: 1
+    color: {r: 1, g: 1, b: 1, a: 0}
+  mapWidth: 150
   mapHeight: 100
-  noiseScale: 4.9
-  octaves: 4
+  noiseScale: 25
+  octaves: 3
   persistence: 0.5
-  lacunarity: 1.87
-  seed: 21
-  offset: {x: 13.4, y: 6.26}
-  textureRenderer: {fileID: 2043395148}
+  lacunarity: 2
+  seed: 47
+  offset: {x: 14.41, y: 1.4}
+  mapDisplay: {fileID: 2043395151}
+  autoUpdate: 1
 --- !u!23 &2043395148
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -393,8 +410,24 @@ Transform:
   m_GameObject: {fileID: 2043395146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_LocalScale: {x: 150, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2043395151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043395146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c98505e3707efc7429ca22b1fc1cbe50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayMode: 1
+  textureRenderer: {fileID: 2043395148}
+  mapGenerator: {fileID: 2043395147}
+  autoUpdate: 1

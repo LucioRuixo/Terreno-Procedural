@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public static class PerlinNoise
+public static class PerlinNoiseGenerator
 {
     public static float[,] GenerateNoiseMap(int mapWidth, int mapHeight, int seed, float scale, int octaves, float persistance, float lacunarity, Vector2 offset)
     {
