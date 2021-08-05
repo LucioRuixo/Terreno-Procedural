@@ -19,6 +19,6 @@ public class MapDisplayEditor : Editor
     {
         MapDisplay mapDisplay = (MapDisplay)target;
 
-        if ((DrawDefaultInspector() && mapDisplay.autoUpdate)) mapDisplay.mapGenerator.Generate();
+        if (DrawDefaultInspector() && mapDisplay.autoUpdate) mapDisplay.mapGenerator.Generate();
     }
 }

@@ -15,6 +15,8 @@ public class MapGenerator : MonoBehaviour
 
     [SerializeField] TerrainType[] terrainTypes = null;
 
+    [Space]
+
     [SerializeField] int mapWidth = 100;
     [SerializeField] int mapHeight = 100;
     [SerializeField] float noiseScale = 1.0f;
@@ -61,6 +63,6 @@ public class MapGenerator : MonoBehaviour
         if (mapWidth < 1) mapWidth = 1;
         if (mapHeight < 1) mapHeight = 1;
         if (lacunarity < 1) lacunarity = 1;
-        if (octaves < 0) octaves = 0;
+        if (octaves < 1) octaves = 1;
     }
 }

@@ -339,19 +339,19 @@ MonoBehaviour:
     height: 0.75
     color: {r: 0.23273467, g: 0.6320754, b: 0.19379672, a: 0}
   - name: Mountain
-    height: 0.9
+    height: 0.95
     color: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 0}
   - name: Mountain Peak
     height: 1
     color: {r: 1, g: 1, b: 1, a: 0}
   mapWidth: 150
   mapHeight: 100
-  noiseScale: 25
-  octaves: 3
-  persistence: 0.5
+  noiseScale: 30.38
+  octaves: 5
+  persistence: 0.312
   lacunarity: 2
   seed: 47
-  offset: {x: 14.41, y: 1.4}
+  offset: {x: 22.19, y: 5.7}
   mapDisplay: {fileID: 2043395151}
   autoUpdate: 1
 --- !u!23 &2043395148
